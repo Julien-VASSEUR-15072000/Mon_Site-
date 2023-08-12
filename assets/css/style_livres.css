@@ -1,0 +1,301 @@
+@font-face {
+  font-family: "Playfair_black";
+  src: url(../fonts/Playfair_Display/static/PlayfairDisplay-Black.ttf);
+}
+
+@font-face {
+  font-family: "Playfair_blackItalic";
+  src: url(../fonts/Playfair_Display/static/PlayfairDisplay-BlackItalic.ttf);
+}
+
+@font-face {
+  font-family: "Playfair_italic";
+  src: url(../fonts/Playfair_Display/static/PlayfairDisplay-Italic.ttf);
+}
+
+@font-face {
+  font-family: "PlayFair_regular";
+  src: url(../fonts/Playfair_Display/static/PlayfairDisplay-Regular.ttf);
+}
+
+@font-face {
+  font-family: "DancingScript_Bold";
+  src: url(../fonts/DancingCript/static/DancingScript-Bold.ttf);
+}
+
+body:hover {
+  cursor: default;
+}
+
+body {
+  height: 1069px;
+  max-width: 1920px;
+  background: #dbdbdb;
+  opacity: 0;
+  animation: body 500ms both;
+}
+
+@keyframes body {
+  100% {
+    opacity: 1;
+  }
+}
+
+header {
+  width: 100%;
+  height: 150px;
+  border-bottom: solid 5px black;
+  background: #dbdbdb;
+}
+
+h1 {
+  transition: 500ms;
+  font-size: 60px;
+  margin: 0 0 0 40px;
+  font-family: DancingScript_Bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+ul {
+  margin: 0 10px 0 0;
+  display: flex;
+  padding: 0;
+  flex-direction: column;
+  justify-content: center;
+}
+
+li {
+  list-style-type: none;
+}
+
+.transform:hover {
+  transition: 300ms;
+  transform: scale(1.1);
+}
+
+.transform {
+  font-family: PlayFair_regular;
+  color: black;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.displayFlex {
+  display: flex;
+}
+
+.justifyContentSpaceAround {
+  justify-content: space-around;
+}
+
+.justifyContentSpaceBetween {
+  justify-content: space-between;
+}
+
+.MHP1 {
+  width: 100%;
+  padding-top: 20px;
+  margin: auto;
+  background: #ba5959;
+  height: 650px;
+  border-bottom: solid 5px black;
+  position: relative;
+}
+
+.positionAbsolute {
+  position: absolute;
+}
+
+.MHP1__h2 {
+  width: 300px;
+  font-size: 35px;
+  font-family: Playfair_black;
+  top: 40px;
+  right: 40px;
+  margin: 0;
+}
+
+.MHP1__h3 {
+  font-family: PlayFair_regular;
+  bottom: 540px;
+  left: 475px;
+  margin: 0;
+  font-size: 25px;
+}
+
+.aImgMHP1 {
+  height: 540px;
+  width: 345px;
+  border: solid 5px black;
+  border-radius: 30px;
+  bottom: 20px;
+  left: 40px;
+  overflow: hidden;
+}
+
+.imgMHP1 {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.trait {
+  left: 475px;
+  bottom: 500px;
+  width: 5px;
+  height: 2px;
+  background: black;
+  transform-origin: left;
+  animation: trait 6000ms 400ms both;
+}
+
+.trait2 {
+  left: 475px;
+  bottom: 155px;
+  width: 5px;
+  height: 2px;
+  background: black;
+  transform-origin: left;
+  animation: trait 10000ms 400ms both;
+}
+
+@keyframes trait {
+  100% {
+    transform: scaleX(50);
+  }
+}
+
+.MHP1__p {
+  font-family: PlayFair_regular;
+  text-align: justify;
+  width: 500px;
+  height: 429px;
+  bottom: 20px;
+  left: 475px;
+  color: #dbdbdb;
+}
+
+.aLien {
+  transform-origin: left;
+  left: 475px;
+  bottom: 90px;
+  display: inline;
+}
+
+.colorWithe {
+  color: #dbdbdb;
+}
+
+.aLien__2 {
+  bottom: 40px;
+}
+
+::selection {
+  background-color: #dbdbdb;
+}
+
+.MHP2 {
+  background: #fffab5;
+  width: 100%;
+  padding-top: 20px;
+  margin: auto;
+  height: 650px;
+  border-bottom: solid 5px black;
+  position: relative;
+}
+
+.centrageEnCours {
+  top: 50%;
+  height: 72px;
+  color: #ba5959;
+  text-align: center;
+  width: 280px;
+  font-size: 27px;
+  transform: translate(-50%, -50%);
+  left: 50%;
+}
+
+@media screen and (max-width: 1024px) {
+  .MHP1 {
+    transition: 500ms;
+    height: 1250px;
+  }
+
+  .aImgMHP1 {
+    transition: 500ms;
+    bottom: 600px;
+  }
+
+  .trait {
+    transition: 500ms;
+    transform-origin: center;
+  }
+
+  .trait2 {
+    transition: 500ms;
+    transform-origin: center;
+  }
+
+  .centrage {
+    transition: 500ms;
+    transform: translateX(-50%);
+    left: 50%;
+  }
+
+  .disparition {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .MHP1__h3 {
+    transition: 500ms;
+    bottom: 690px;
+  }
+
+  .trait {
+    transition: 500ms;
+    bottom: 650px;
+  }
+
+  .MHP1__p {
+    transition: 500ms;
+    width: 290px;
+    bottom: 170px;
+  }
+
+  .MHP1 {
+    transition: 500ms;
+    height: 1250px;
+  }
+
+  .aLien {
+    transition: 500ms;
+    width: 290px;
+    text-align: center;
+  }
+
+  .aImgMHP1 {
+    transition: 500ms;
+    bottom: 750px;
+    height: 400px;
+    width: 245px;
+  }
+
+  h1 {
+    transition: 500ms;
+    font-size: 45px;
+    margin-left: 10px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  h1 {
+    transition: 500ms;
+    font-size: 30px;
+  }
+}

@@ -1,0 +1,191 @@
+@font-face {
+  font-family: "Playfair_black";
+  src: url(../fonts/Playfair_Display/static/PlayfairDisplay-Black.ttf);
+}
+
+@font-face {
+  font-family: "Playfair_blackItalic";
+  src: url(../fonts/Playfair_Display/static/PlayfairDisplay-BlackItalic.ttf);
+}
+
+@font-face {
+  font-family: "Playfair_italic";
+  src: url(../fonts/Playfair_Display/static/PlayfairDisplay-Italic.ttf);
+}
+
+@font-face {
+  font-family: "PlayFair_regular";
+  src: url(../fonts/Playfair_Display/static/PlayfairDisplay-Regular.ttf);
+}
+
+::selection {
+  background-color: #bf2222;
+}
+
+.positionAbsolute {
+  position: absolute;
+}
+
+.arrow {
+  width: 40px;
+}
+
+.transform:hover {
+  transition: 300ms;
+  transform: scale(1.1);
+}
+
+.transform {
+  font-family: PlayFair_regular;
+  color: black;
+  text-decoration: none;
+}
+
+body:hover {
+  cursor: default;
+}
+
+body {
+  height: 1069px;
+  max-width: 1920px;
+  background: #ba5959;
+  position: relative;
+  opacity: 0;
+  animation: body 500ms both;
+}
+
+@keyframes body {
+  100% {
+    opacity: 1;
+  }
+}
+
+.displayFlex {
+  display: flex;
+}
+
+.justifyContentSpaceAround {
+  justify-content: space-around;
+}
+
+.justifyContentSpaceBetween {
+  justify-content: space-between;
+}
+
+h1 {
+  transition: 500ms;
+  flex-direction: row;
+  margin-left: 40px;
+  width: 48.61%;
+  height: 165px;
+  border: solid black 5px;
+  border-radius: 82.5px 82.5px 0px 0px;
+  background: white;
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  align-items: center;
+  font-size: 50px;
+  font-family: Playfair_blackItalic;
+}
+
+section {
+  transition: 500ms;
+  margin-left: 40px;
+  width: 94.4%;
+  height: 100%;
+  padding-bottom: 200px;
+  border-radius: 0px 367px 367px 367px;
+  border-top: solid black 5px;
+  border-left: solid black 5px;
+  border-right: solid black 5px;
+  background: linear-gradient(180deg, #fff 34%, #ba5959 100%);
+}
+
+h2 {
+  transition: 500ms;
+  margin: 40px 40px 0 40px;
+  font-family: PlayFair_regular;
+}
+
+p {
+  transition: 500ms;
+  font-family: PlayFair_regular;
+  width: 80%;
+  margin: 30px 0 0 40px;
+  text-align: justify;
+}
+
+.italique {
+  display: block;
+  font-family: Playfair_blackItalic;
+  text-align: center;
+}
+
+.trait {
+  width: 5px;
+  height: 2px;
+  background: black;
+  margin: 40px 0 0 40px;
+  transform-origin: left;
+}
+
+.ani1 {
+  animation: trait 5000ms both;
+}
+
+.ani2 {
+  animation: trait 7000ms both;
+}
+
+.ani3 {
+  animation: trait 9000ms both;
+}
+
+.ani4 {
+  animation: trait 11000ms both;
+}
+
+@keyframes trait {
+  100% {
+    transform: scaleX(45);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    transition: 500ms;
+    width: 100%;
+    border-radius: 0;
+    border-left: 0;
+    border-right: 0;
+    margin: 30px 0 40px 0;
+  }
+
+  section {
+    transition: 500ms;
+    width: 100%;
+    margin: 0;
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+    padding-top: 0.1px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  h1 {
+    transition: 500ms;
+    font-size: 30px;
+  }
+
+  h2 {
+    transition: 500ms;
+    font-size: 20px;
+  }
+
+  p {
+    transition: 500ms;
+    margin: 30px auto 0 auto;
+  }
+}

@@ -1,0 +1,648 @@
+@font-face {
+  font-family: "Playfair_black";
+  src: url(../fonts/Playfair_Display/static/PlayfairDisplay-Black.ttf);
+}
+
+@font-face {
+  font-family: "Playfair_blackItalic";
+  src: url(../fonts/Playfair_Display/static/PlayfairDisplay-BlackItalic.ttf);
+}
+
+@font-face {
+  font-family: "Playfair_italic";
+  src: url(../fonts/Playfair_Display/static/PlayfairDisplay-Italic.ttf);
+}
+
+@font-face {
+  font-family: "PlayFair_regular";
+  src: url(../fonts/Playfair_Display/static/PlayfairDisplay-Regular.ttf);
+}
+
+body:hover {
+  cursor: default;
+}
+
+::selection {
+  background-color: #bf2222;
+}
+
+.whole_body {
+  animation: whole_body 2000ms 2000ms both;
+  overflow: hidden;
+}
+
+body {
+  height: 1069px;
+  max-width: 1920px;
+}
+
+header {
+  width: 30px;
+  position: sticky;
+  top: 0%;
+  left: -440px;
+  animation: loader_header 4000ms forwards;
+  z-index: 10;
+}
+
+h1 {
+  font-family: Playfair_blackItalic;
+  width: 350px;
+  text-align: center;
+  font-size: 30px;
+  padding: 10px;
+  margin: 40px 0 0 40px;
+  border: 5px solid #000;
+  border-radius: 50px;
+  background: #bf2222;
+  animation: opacity 500ms 4000ms both;
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.animationH1 {
+  position: fixed;
+  animation: loader 4000ms forwards;
+}
+
+@keyframes loader {
+  0% {
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 0.8;
+    transform: rotate(0turn);
+  }
+
+  40% {
+    opacity: 1;
+    transform: rotate(-1turn) scale(2);
+  }
+
+  80% {
+    transform: rotate(-1turn) scale(2);
+  }
+
+  90% {
+    transform: rotate(-2turn) scale(1);
+  }
+
+  100% {
+    transform: rotate(-2turn);
+  }
+}
+
+@keyframes loader_header {
+  0% {
+    transform: translate(-500px 300px);
+  }
+
+  10% {
+    transform: translate(-500px, 300px);
+  }
+
+  20% {
+    transform: translate(500px, 300px);
+  }
+
+  80% {
+    transform: translate(500px, 300px);
+  }
+
+  100% {
+    transform: translate(500px, -400px);
+    display: none;
+  }
+}
+
+main {
+  margin: 40px 0 40px 0;
+}
+
+.displayFlex {
+  display: flex;
+}
+
+.justifyContentSpaceAround {
+  justify-content: space-around;
+}
+
+.backgroundAccueil {
+  background: radial-gradient(
+    76.83% 51.99% at 13.72% 30.57%,
+    #bf2222 0%,
+    #bf2222 27.19%,
+    #000 100%
+  );
+}
+
+.sectionLeft {
+  height: 994px;
+  width: 20.833%;
+}
+
+.imgAccueil {
+  object-fit: cover;
+  width: calc(100% - 10px);
+  height: 325px;
+  border: 5px solid black;
+  border-radius: 150px;
+  animation: sectionLeft 1500ms 3000ms both;
+}
+
+.liens_livres {
+  overflow: hidden;
+  display: block;
+  width: calc(100% - 10px);
+  height: 612px;
+  margin-top: 32px;
+  border-radius: 150px 150px 0px 150px;
+  border: 5px solid #000;
+  background: rgba(217, 217, 217, 0.85);
+  animation: sectionLeft 750ms 3000ms both;
+}
+
+.imgLivre {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+
+.sectionRight {
+  width: 69.414%;
+  height: 984px;
+  border-radius: 50px 50px 50px 0px;
+  border: 5px solid #000;
+  background: rgba(217, 217, 217, 0.85);
+  animation: sectionRight 750ms 3000ms both;
+  position: relative;
+}
+
+@keyframes sectionLeft {
+  0% {
+    transform: translateX(-400px) scaleX(0);
+  }
+
+  100% {
+    transform: translateX(0px) scaleX(1);
+  }
+}
+
+@keyframes sectionRight {
+  0% {
+    transform: translateX(1500px) scaleX(0);
+  }
+
+  100% {
+    transform: translateX(0px) scaleX(1);
+  }
+}
+
+@keyframes whole_body {
+  0% {
+    opacity: 0;
+  }
+
+  90% {
+    opacity: 0.2;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.sectionRight__p {
+  font-family: PlayFair_regular;
+  text-align: justify;
+  margin: 0;
+  padding: 40px;
+}
+
+.sectionRight__p__abuse {
+  font-family: Playfair_italic;
+  display: block;
+  text-align: center;
+  position: relative;
+}
+
+.sectionRight__p__heureux {
+  font-family: Playfair_black;
+}
+
+.sectionRight__p__heureux__fin {
+  font-family: Playfair_blackItalic;
+  display: block;
+  text-align: center;
+}
+
+.sectionRight__p__heureux__signature {
+  display: block;
+  text-align: right;
+}
+
+.apparition {
+  font-family: Playfair_black;
+  position: absolute;
+  /* bottom: 80px; */
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+}
+
+.sectionRight__p__abuse:hover {
+  color: #bf2222;
+}
+
+.sectionRight__p__abuse:hover .disparition {
+  transition: 500ms;
+  opacity: 0;
+}
+
+.sectionRight__p__abuse:hover .apparition {
+  transition: 500ms;
+  opacity: 1;
+}
+
+.disparition {
+  transition: 500ms;
+}
+
+.disparition2019 {
+  display: block;
+  font-family: PlayFair_regular;
+  text-align: right;
+  position: absolute;
+  right: 0%;
+  margin-bottom: 40px;
+}
+
+.apparition2023 {
+  display: block;
+  opacity: 0;
+  font-family: Playfair_black;
+  text-align: right;
+  position: absolute;
+  right: 0%;
+  margin-bottom: 40px;
+}
+
+.sectionRight__p__abuse:hover .disparition2019 {
+  animation: disparition 500ms both;
+}
+
+.sectionRight__p__abuse:hover .apparition2023 {
+  animation: apparition 500ms both;
+}
+
+@keyframes disparition {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes apparition {
+  100% {
+    opacity: 1;
+  }
+}
+
+.trait {
+  display: block;
+  width: 1%;
+  height: 2px;
+  background-color: #bf2222;
+  animation: trait 10000ms 4000ms both;
+  margin: 20px auto 0 auto;
+}
+
+@keyframes trait {
+  100% {
+    width: 90%;
+  }
+}
+
+.aLien {
+  margin-top: 20px;
+  font-family: Playfair_blackItalic;
+  font-size: 30px;
+  display: block;
+  color: #bf2222;
+  text-decoration: none;
+  display: none;
+}
+
+.aLien_2 {
+  margin-top: 20px;
+  font-family: Playfair_blackItalic;
+  font-size: 30px;
+  display: block;
+  color: #bf2222;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 1320px) {
+  body {
+    transition: 500ms;
+    height: 1390px;
+  }
+
+  .liens_livres {
+    transition: 500ms;
+    margin-top: 548px;
+    height: 412px;
+  }
+
+  .sectionRight {
+    transition: 500ms;
+    height: 1300px;
+  }
+
+  @keyframes loader_header {
+    0% {
+      transform: translate(-500px 300px);
+    }
+
+    10% {
+      transform: translate(-500px, 300px);
+    }
+
+    20% {
+      transform: translate(300px, 300px);
+    }
+
+    80% {
+      transform: translate(300px, 300px);
+    }
+
+    100% {
+      transform: translate(300px, -400px);
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  body {
+    transition: 500ms;
+    max-width: 1024px;
+    height: 2330px;
+  }
+
+  .flexDirectionColumn {
+    transition: 500ms;
+    flex-direction: column;
+  }
+
+  .sectionLeft {
+    transition: 500ms;
+    width: 100%;
+    height: 1200px;
+  }
+
+  .liens_livres {
+    transition: 500ms;
+    margin: 40px auto;
+    width: 400px;
+    height: 700px;
+    border-radius: 0;
+  }
+
+  .imgAccueil {
+    transition: 500ms;
+    display: block;
+    width: 400px;
+    height: 400px;
+    margin: auto;
+    border-radius: 150px 150px 0 0;
+  }
+
+  .sectionRight {
+    transition: 500ms;
+    width: 90%;
+    margin: auto;
+    height: 1050px;
+  }
+
+  .sectionRight__p__abuse:hover {
+    color: #000;
+  }
+
+  .disparition {
+    transition: 500ms;
+    display: none;
+  }
+
+  .apparition {
+    transition: 500ms;
+    opacity: 1;
+  }
+
+  .disparition2019 {
+    transition: 500ms;
+    display: none;
+  }
+
+  .apparition2023 {
+    transition: 500ms;
+    opacity: 1;
+  }
+
+  @keyframes loader_header {
+    0% {
+      transform: translate(-500px 300px);
+    }
+
+    10% {
+      transform: translate(-500px, 300px);
+    }
+
+    20% {
+      transform: translate(200px, 300px);
+    }
+
+    80% {
+      transform: translate(200px, 300px);
+    }
+
+    100% {
+      transform: translate(200px, -400px);
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    transition: 500ms;
+    height: 100%;
+  }
+
+  main {
+    transition: 500ms;
+    margin: 0;
+  }
+
+  .sectionLeft {
+    transition: 500ms;
+    height: 150px;
+  }
+
+  .imgAccueil {
+    transition: 500ms;
+    width: 100%;
+    height: 100px;
+    object-position: 0 47%;
+    border-radius: 0;
+    border-bottom: solid 5px black;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+  }
+
+  .liens_livres {
+    transition: 500ms;
+    display: none;
+  }
+
+  .sectionRight {
+    transition: 500ms;
+    width: 100%;
+    border-radius: 0;
+    border: 0;
+    border-top: solid 5px black;
+    height: 100%;
+  }
+
+  h1 {
+    transition: 500ms;
+    width: 250px;
+    font-size: 20px;
+  }
+
+  p {
+    transition: 500ms;
+    font-size: 15px;
+  }
+
+  .h1 {
+    transition: 500ms;
+    width: 175px;
+    font-size: 13px;
+  }
+
+  @keyframes loader_header {
+    0% {
+      transform: translate(-500px 300px);
+    }
+
+    10% {
+      transform: translate(-500px, 300px);
+    }
+
+    20% {
+      transform: translate(0px, 300px);
+    }
+
+    80% {
+      transform: translate(0px, 300px);
+    }
+
+    100% {
+      transform: translate(0px, -400px);
+      display: none;
+    }
+  }
+
+  @keyframes loader {
+    0% {
+      opacity: 0;
+    }
+
+    20% {
+      opacity: 0.8;
+      transform: rotate(0turn);
+    }
+
+    40% {
+      opacity: 1;
+      transform: rotate(-1turn) scale(1.2);
+    }
+
+    80% {
+      transform: rotate(-1turn) scale(1.2);
+    }
+
+    90% {
+      transform: rotate(-2turn) scale(1);
+    }
+
+    100% {
+      transform: rotate(-2turn);
+    }
+  }
+
+  .aLien {
+    transition: 500ms;
+    display: block;
+    margin: 40px 0 0 40px;
+    font-size: 22px;
+  }
+
+  .aLien_2 {
+    transition: 500ms;
+    font-size: 18px;
+  }
+}
+
+.aLien:hover {
+  transition: 300ms;
+  transform-origin: left;
+  transform: scaleX(1.1);
+}
+
+.aLien_2:hover {
+  transition: 300ms;
+  transform-origin: left;
+  transform: scaleX(1.1);
+}
+
+@media screen and (max-width: 375px) {
+  .sectionRight__p {
+    padding: 40px 10px 40px 10px;
+  }
+
+  .h1 {
+    transition: 500ms;
+    width: 175px;
+    font-size: 13px;
+  }
+
+  h1 {
+    transition: 500ms;
+    margin: 40px 0 0 10px;
+    width: 200px;
+    font-size: 15px;
+  }
+
+  .aLien {
+    transition: 500ms;
+    display: block;
+    margin: 40px 0 0 10px;
+    font-size: 18px;
+  }
+}
