@@ -106,6 +106,95 @@ li {
   position: relative;
 }
 
+.section__com {
+  font-family: PlayFair_regular;
+  position: absolute;
+  left: 40px;
+  top: 25px;
+  margin: 0;
+  padding: 10px;
+  width: 270px;
+  text-align: center;
+}
+
+.section__com__link {
+  color: #dbdbdb;
+  text-decoration: none;
+  display: block;
+}
+
+.margin1 {
+  margin-top: 1px;
+}
+
+.section__com__link__anim,
+.section__com__link__anim2,
+.section__com__link__anim3 {
+  width: 1px;
+  height: 1px;
+  background: transparent;
+  display: block;
+  margin-left: 35%;
+}
+
+.section__com__link:hover + .section__com__link__anim {
+  transform-origin: left;
+  background: #dbdbdb;
+  animation: linkAnim 300ms both;
+  animation-timing-function: cubic-bezier(0.92, 0.04, 1, 1);
+}
+
+.section__com__link:hover ~ .section__com__link__anim2 {
+  transform-origin: left;
+  background: #dbdbdb;
+  animation: linkAnim 300ms 50ms both;
+  animation-timing-function: cubic-bezier(0.92, 0.04, 1, 1);
+}
+
+.section__com__link:hover ~ .section__com__link__anim3 {
+  transform-origin: left;
+  background: #dbdbdb;
+  animation: linkAnim 300ms 100ms both;
+  animation-timing-function: cubic-bezier(0.92, 0.04, 1, 1);
+}
+
+@keyframes linkAnim {
+  100% {
+    transform: scaleX(70);
+  }
+}
+
+.section__com__link:active + .section__com__link__anim {
+  transform-origin: left;
+  background: #dbdbdb;
+  animation: linkAnimActive 100ms both;
+  animation-timing-function: cubic-bezier(0.92, 0.04, 1, 1);
+}
+
+.section__com__link:active ~ .section__com__link__anim2 {
+  transform-origin: left;
+  background: #dbdbdb;
+  animation: linkAnimActive 100ms both;
+  animation-timing-function: cubic-bezier(0.92, 0.04, 1, 1);
+}
+
+.section__com__link:active ~ .section__com__link__anim3 {
+  transform-origin: left;
+  background: #dbdbdb;
+  animation: linkAnimActive 100ms both;
+  animation-timing-function: cubic-bezier(0.92, 0.04, 1, 1);
+}
+
+@keyframes linkAnimActive {
+  0% {
+    transform: scaleX(70);
+  }
+
+  100% {
+    transform: scaleX(120) translateX(20px);
+  }
+}
+
 .positionAbsolute {
   position: absolute;
 }
@@ -219,10 +308,31 @@ li {
   left: 50%;
 }
 
+.enCoursEcriture {
+  width: 300px;
+  font-size: 28px;
+  font-family: Playfair_black;
+  bottom: 50%;
+  right: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  margin: 0;
+}
+
 @media screen and (max-width: 1024px) {
+  .centrage {
+    transition: 500ms;
+    transform: translateX(-50%);
+    left: 50%;
+  }
+
+  .MHP1__h2 {
+    top: auto;
+    bottom: 1175px;
+  }
+
   .MHP1 {
     transition: 500ms;
-    height: 1250px;
+    height: 1290px;
   }
 
   .aImgMHP1 {
@@ -238,12 +348,6 @@ li {
   .trait2 {
     transition: 500ms;
     transform-origin: center;
-  }
-
-  .centrage {
-    transition: 500ms;
-    transform: translateX(-50%);
-    left: 50%;
   }
 
   .disparition {
@@ -266,11 +370,6 @@ li {
     transition: 500ms;
     width: 290px;
     bottom: 170px;
-  }
-
-  .MHP1 {
-    transition: 500ms;
-    height: 1250px;
   }
 
   .aLien {

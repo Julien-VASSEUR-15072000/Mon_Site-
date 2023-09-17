@@ -222,6 +222,95 @@ main {
   }
 }
 
+.sectionRight__com {
+  font-family: PlayFair_regular;
+  position: absolute;
+  right: 40px;
+  top: 40px;
+  margin: 0;
+  padding: 10px;
+  width: 190px;
+  text-align: center;
+}
+
+.sectionRight__com__link {
+  color: #bf2222;
+  text-decoration: none;
+  display: block;
+}
+
+.margin1 {
+  margin-top: 1px;
+}
+
+.sectionRight__com__link__anim,
+.sectionRight__com__link__anim2,
+.sectionRight__com__link__anim3 {
+  width: 1px;
+  height: 1px;
+  background: transparent;
+  display: block;
+  margin-left: 31%;
+}
+
+.sectionRight__com__link:hover + .sectionRight__com__link__anim {
+  transform-origin: left;
+  background: #bf2222;
+  animation: linkAnim 300ms both;
+  animation-timing-function: cubic-bezier(0.92, 0.04, 1, 1);
+}
+
+.sectionRight__com__link:hover ~ .sectionRight__com__link__anim2 {
+  transform-origin: left;
+  background: #bf2222;
+  animation: linkAnim 300ms 50ms both;
+  animation-timing-function: cubic-bezier(0.92, 0.04, 1, 1);
+}
+
+.sectionRight__com__link:hover ~ .sectionRight__com__link__anim3 {
+  transform-origin: left;
+  background: #bf2222;
+  animation: linkAnim 300ms 100ms both;
+  animation-timing-function: cubic-bezier(0.92, 0.04, 1, 1);
+}
+
+@keyframes linkAnim {
+  100% {
+    transform: scaleX(70);
+  }
+}
+
+.sectionRight__com__link:active + .sectionRight__com__link__anim {
+  transform-origin: left;
+  background: #bf2222;
+  animation: linkAnimActive 100ms both;
+  animation-timing-function: cubic-bezier(0.92, 0.04, 1, 1);
+}
+
+.sectionRight__com__link:active ~ .sectionRight__com__link__anim2 {
+  transform-origin: left;
+  background: #bf2222;
+  animation: linkAnimActive 100ms both;
+  animation-timing-function: cubic-bezier(0.92, 0.04, 1, 1);
+}
+
+.sectionRight__com__link:active ~ .sectionRight__com__link__anim3 {
+  transform-origin: left;
+  background: #bf2222;
+  animation: linkAnimActive 100ms both;
+  animation-timing-function: cubic-bezier(0.92, 0.04, 1, 1);
+}
+
+@keyframes linkAnimActive {
+  0% {
+    transform: scaleX(70);
+  }
+
+  100% {
+    transform: scaleX(120) translateX(-20px);
+  }
+}
+
 .sectionRight__p {
   font-family: PlayFair_regular;
   text-align: justify;
@@ -487,6 +576,16 @@ main {
 }
 
 @media screen and (max-width: 768px) {
+  @keyframes linkAnimActive {
+    0% {
+      transform: scaleX(70);
+    }
+
+    100% {
+      transform: scaleX(120) translateX(20px);
+    }
+  }
+
   body {
     transition: 500ms;
     height: 100%;
@@ -532,6 +631,12 @@ main {
     transition: 500ms;
     width: 250px;
     font-size: 20px;
+  }
+
+  .sectionRight__com {
+    position: sticky;
+    transition: 500ms;
+    margin: 0 0 40px 40px;
   }
 
   p {
@@ -644,5 +749,10 @@ main {
     display: block;
     margin: 40px 0 0 10px;
     font-size: 18px;
+  }
+
+  .sectionRight__com {
+    transition: 500ms;
+    margin: 0 auto 40px auto;
   }
 }
