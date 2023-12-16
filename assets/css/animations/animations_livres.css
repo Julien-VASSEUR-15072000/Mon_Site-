@@ -1,0 +1,64 @@
+.link__anim,
+.link__anim2,
+.link__anim3 {
+  width: 1px;
+  height: 1px;
+  background: transparent;
+  display: block;
+  margin-left: 35%;
+  transition-duration: 300ms;
+}
+
+.link:hover + .link__anim {
+  background: #ffffff;
+  transform-origin: left;
+  transform: scaleX(70);
+  animation-timing-function: cubic-bezier(0.92, 0.04, 1, 1);
+}
+
+.link:hover ~ .link__anim2 {
+  transform-origin: left;
+  transition-delay: 50ms;
+  background: #ffffff;
+  transform: scaleX(70);
+  animation-timing-function: cubic-bezier(0.92, 0.04, 1, 1);
+}
+
+.link:hover ~ .link__anim3 {
+  transform-origin: left;
+  transition-delay: 100ms;
+  background: #ffffff;
+  transform: scaleX(70);
+  animation-timing-function: cubic-bezier(0.92, 0.04, 1, 1);
+}
+
+.link:active + .link__anim {
+  transform-origin: left;
+  background: #ffffff;
+  animation: linkAnimActive 100ms both;
+  animation-timing-function: cubic-bezier(0.92, 0.04, 1, 1);
+}
+
+.link:active ~ .link__anim2 {
+  transform-origin: left;
+  background: #ffffff;
+  animation: linkAnimActive 100ms both;
+  animation-timing-function: cubic-bezier(0.92, 0.04, 1, 1);
+}
+
+.link:active ~ .link__anim3 {
+  transform-origin: left;
+  background: #ffffff;
+  animation: linkAnimActive 100ms both;
+  animation-timing-function: cubic-bezier(0.92, 0.04, 1, 1);
+}
+
+@keyframes linkAnimActive {
+  0% {
+    transform: scaleX(70);
+  }
+
+  100% {
+    transform: scaleX(120) translateX(20px);
+  }
+}

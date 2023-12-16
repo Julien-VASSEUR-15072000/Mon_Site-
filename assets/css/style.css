@@ -23,7 +23,7 @@ body:hover {
 }
 
 ::selection {
-  background-color: #bf2222;
+  background-color: #ee7474;
 }
 
 .whole_body {
@@ -34,6 +34,7 @@ body:hover {
 body {
   height: 1069px;
   max-width: 1920px;
+  transition: 500ms;
 }
 
 header {
@@ -52,9 +53,8 @@ h1 {
   font-size: 30px;
   padding: 10px;
   margin: 40px 0 0 40px;
-  border: 5px solid #000;
   border-radius: 50px;
-  background: #bf2222;
+  background: #ee7474;
   animation: opacity 500ms 4000ms both;
 }
 
@@ -137,12 +137,7 @@ main {
 }
 
 .backgroundAccueil {
-  background: radial-gradient(
-    76.83% 51.99% at 13.72% 30.57%,
-    #bf2222 0%,
-    #bf2222 27.19%,
-    #000 100%
-  );
+  background: #ffffff;
 }
 
 .sectionLeft {
@@ -150,42 +145,55 @@ main {
   width: 20.833%;
 }
 
+.stylePhoto {
+  margin: 0;
+  width: 100%;
+  height: 335px;
+  border-radius: 150px;
+  background: #ee7474;
+  animation: sectionLeft 1500ms 3000ms both;
+}
+
 .imgAccueil {
   object-fit: cover;
   width: calc(100% - 10px);
   height: 325px;
-  border: 5px solid black;
+  border: solid 3px #ee7474;
   border-radius: 150px;
   animation: sectionLeft 1500ms 3000ms both;
+  transition: 500ms;
 }
 
 .liens_livres {
   overflow: hidden;
-  display: block;
-  width: calc(100% - 10px);
+  display: flex;
   height: 612px;
-  margin-top: 32px;
-  border-radius: 150px 150px 0px 150px;
-  border: 5px solid #000;
-  background: rgba(217, 217, 217, 0.85);
+  margin-top: 52px;
+  width: 100%;
+  background: #ee7474;
+  border-radius: 150px;
   animation: sectionLeft 750ms 3000ms both;
+  transition: 500ms;
+  align-items: flex-end;
 }
 
 .imgLivre {
   object-fit: cover;
-  width: 100%;
-  height: 100%;
-  margin: auto;
+  width: calc(100% - 11px);
+  height: calc(100% - 11px);
+  border: solid 3px #ee7474;
+  border-radius: 150px;
+  transition: 500ms;
+  animation: sectionLeft 750ms 3000ms both;
 }
 
 .sectionRight {
   width: 69.414%;
-  height: 984px;
-  border-radius: 50px 50px 50px 0px;
-  border: 5px solid #000;
-  background: rgba(217, 217, 217, 0.85);
+  height: 994px;
+  border-radius: 100px;
   animation: sectionRight 750ms 3000ms both;
   position: relative;
+  transition: 500ms;
 }
 
 @keyframes sectionLeft {
@@ -231,74 +239,19 @@ main {
   padding: 10px;
   width: 190px;
   text-align: center;
+  transition: 500ms;
 }
 
-.sectionRight__com__link {
-  color: #bf2222;
+.link {
+  color: #ee7474;
   text-decoration: none;
   display: block;
+  transition: 500ms;
 }
 
 .margin1 {
   margin-top: 1px;
-}
-
-.sectionRight__com__link__anim,
-.sectionRight__com__link__anim2,
-.sectionRight__com__link__anim3 {
-  width: 1px;
-  height: 1px;
-  background: transparent;
-  display: block;
-  margin-left: 31%;
-}
-
-.sectionRight__com__link:hover + .sectionRight__com__link__anim {
-  transform-origin: left;
-  background: #bf2222;
-  animation: linkAnim 300ms both;
-  animation-timing-function: cubic-bezier(0.92, 0.04, 1, 1);
-}
-
-.sectionRight__com__link:hover ~ .sectionRight__com__link__anim2 {
-  transform-origin: left;
-  background: #bf2222;
-  animation: linkAnim 300ms 50ms both;
-  animation-timing-function: cubic-bezier(0.92, 0.04, 1, 1);
-}
-
-.sectionRight__com__link:hover ~ .sectionRight__com__link__anim3 {
-  transform-origin: left;
-  background: #bf2222;
-  animation: linkAnim 300ms 100ms both;
-  animation-timing-function: cubic-bezier(0.92, 0.04, 1, 1);
-}
-
-@keyframes linkAnim {
-  100% {
-    transform: scaleX(70);
-  }
-}
-
-.sectionRight__com__link:active + .sectionRight__com__link__anim {
-  transform-origin: left;
-  background: #bf2222;
-  animation: linkAnimActive 100ms both;
-  animation-timing-function: cubic-bezier(0.92, 0.04, 1, 1);
-}
-
-.sectionRight__com__link:active ~ .sectionRight__com__link__anim2 {
-  transform-origin: left;
-  background: #bf2222;
-  animation: linkAnimActive 100ms both;
-  animation-timing-function: cubic-bezier(0.92, 0.04, 1, 1);
-}
-
-.sectionRight__com__link:active ~ .sectionRight__com__link__anim3 {
-  transform-origin: left;
-  background: #bf2222;
-  animation: linkAnimActive 100ms both;
-  animation-timing-function: cubic-bezier(0.92, 0.04, 1, 1);
+  transition: 500ms;
 }
 
 @keyframes linkAnimActive {
@@ -316,6 +269,7 @@ main {
   text-align: justify;
   margin: 0;
   padding: 40px;
+  transition: 500ms;
 }
 
 .sectionRight__p__abuse {
@@ -323,6 +277,7 @@ main {
   display: block;
   text-align: center;
   position: relative;
+  transition: 500ms;
 }
 
 .sectionRight__p__heureux {
@@ -343,22 +298,21 @@ main {
 .apparition {
   font-family: Playfair_black;
   position: absolute;
-  /* bottom: 80px; */
   left: 50%;
   transform: translateX(-50%);
   opacity: 0;
 }
 
-.sectionRight__p__abuse:hover {
-  color: #bf2222;
+.hoverApparition:hover {
+  color: #ee7474;
 }
 
-.sectionRight__p__abuse:hover .disparition {
+.sectionRight__p:hover .disparition {
   transition: 500ms;
   opacity: 0;
 }
 
-.sectionRight__p__abuse:hover .apparition {
+.hoverApparition:hover .apparition {
   transition: 500ms;
   opacity: 1;
 }
@@ -414,7 +368,7 @@ main {
   display: block;
   width: 1%;
   height: 2px;
-  background-color: #bf2222;
+  background-color: #ee7474;
   animation: trait 10000ms 4000ms both;
   margin: 20px auto 0 auto;
 }
@@ -430,34 +384,36 @@ main {
   font-family: Playfair_blackItalic;
   font-size: 30px;
   display: block;
-  color: #bf2222;
+  color: #ee7474;
   text-decoration: none;
   display: none;
+  transition: 300ms;
+  transform-origin: left;
 }
 
 .aLien_2 {
+  width: 59%;
   margin-top: 20px;
   font-family: Playfair_blackItalic;
   font-size: 30px;
   display: block;
-  color: #bf2222;
+  color: #ee7474;
   text-decoration: none;
+  transition: 300ms;
+  transform-origin: left;
 }
 
 @media screen and (max-width: 1320px) {
   body {
-    transition: 500ms;
     height: 1390px;
   }
 
   .liens_livres {
-    transition: 500ms;
     margin-top: 548px;
     height: 412px;
   }
 
   .sectionRight {
-    transition: 500ms;
     height: 1300px;
   }
 
@@ -487,32 +443,37 @@ main {
 
 @media screen and (max-width: 1024px) {
   body {
-    transition: 500ms;
     max-width: 1024px;
     height: 2330px;
   }
 
   .flexDirectionColumn {
-    transition: 500ms;
     flex-direction: column;
   }
 
+  .stylePhoto {
+    background: transparent;
+    height: 400px;
+  }
+
   .sectionLeft {
-    transition: 500ms;
     width: 100%;
     height: 1200px;
   }
 
   .liens_livres {
-    transition: 500ms;
-    margin: 40px auto;
+    margin: 50px auto;
     width: 400px;
     height: 700px;
+    border-radius: 0;
+    background: transparent;
+  }
+
+  .imgLivre {
     border-radius: 0;
   }
 
   .imgAccueil {
-    transition: 500ms;
     display: block;
     width: 400px;
     height: 400px;
@@ -521,7 +482,6 @@ main {
   }
 
   .sectionRight {
-    transition: 500ms;
     width: 90%;
     margin: auto;
     height: 1050px;
@@ -532,22 +492,18 @@ main {
   }
 
   .disparition {
-    transition: 500ms;
     display: none;
   }
 
   .apparition {
-    transition: 500ms;
     opacity: 1;
   }
 
   .disparition2019 {
-    transition: 500ms;
     display: none;
   }
 
   .apparition2023 {
-    transition: 500ms;
     opacity: 1;
   }
 
@@ -573,6 +529,14 @@ main {
       display: none;
     }
   }
+
+  .aLien {
+    width: 70%;
+  }
+
+  .aLien_2 {
+    width: 70%;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -587,22 +551,18 @@ main {
   }
 
   body {
-    transition: 500ms;
     height: 100%;
   }
 
   main {
-    transition: 500ms;
     margin: 0;
   }
 
   .sectionLeft {
-    transition: 500ms;
     height: 150px;
   }
 
   .imgAccueil {
-    transition: 500ms;
     width: 100%;
     height: 100px;
     object-position: 0 47%;
@@ -614,12 +574,10 @@ main {
   }
 
   .liens_livres {
-    transition: 500ms;
     display: none;
   }
 
   .sectionRight {
-    transition: 500ms;
     width: 100%;
     border-radius: 0;
     border: 0;
@@ -628,24 +586,20 @@ main {
   }
 
   h1 {
-    transition: 500ms;
     width: 250px;
     font-size: 20px;
   }
 
   .sectionRight__com {
     position: sticky;
-    transition: 500ms;
     margin: 0 0 40px 40px;
   }
 
   p {
-    transition: 500ms;
     font-size: 15px;
   }
 
   .h1 {
-    transition: 500ms;
     width: 175px;
     font-size: 13px;
   }
@@ -702,28 +656,37 @@ main {
   }
 
   .aLien {
-    transition: 500ms;
+    width: 85%;
     display: block;
     margin: 40px 0 0 40px;
     font-size: 22px;
   }
 
   .aLien_2 {
-    transition: 500ms;
+    width: 85%;
     font-size: 18px;
   }
 }
 
 .aLien:hover {
-  transition: 300ms;
-  transform-origin: left;
   transform: scaleX(1.1);
 }
 
 .aLien_2:hover {
-  transition: 300ms;
-  transform-origin: left;
   transform: scaleX(1.1);
+}
+
+@media screen and (max-width: 425px) {
+  .aLien {
+    width: 100%;
+    display: block;
+    margin: 40px 0 0 10px;
+    font-size: 18px;
+  }
+
+  .aLien_2 {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 375px) {
@@ -732,27 +695,17 @@ main {
   }
 
   .h1 {
-    transition: 500ms;
     width: 175px;
     font-size: 13px;
   }
 
   h1 {
-    transition: 500ms;
     margin: 40px 0 0 10px;
     width: 200px;
     font-size: 15px;
   }
 
-  .aLien {
-    transition: 500ms;
-    display: block;
-    margin: 40px 0 0 10px;
-    font-size: 18px;
-  }
-
   .sectionRight__com {
-    transition: 500ms;
     margin: 0 auto 40px auto;
   }
 }

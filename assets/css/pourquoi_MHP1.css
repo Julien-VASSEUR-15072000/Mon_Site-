@@ -31,7 +31,6 @@
 }
 
 .transform:hover {
-  transition: 300ms;
   transform: scale(1.1);
 }
 
@@ -39,6 +38,7 @@
   font-family: PlayFair_regular;
   color: black;
   text-decoration: none;
+  transition: 300ms;
 }
 
 body:hover {
@@ -48,7 +48,7 @@ body:hover {
 body {
   height: 1069px;
   max-width: 1920px;
-  background: #ba5959;
+  background: #ee7474;
   position: relative;
   opacity: 0;
   animation: body 500ms both;
@@ -99,7 +99,7 @@ section {
   border-top: solid black 5px;
   border-left: solid black 5px;
   border-right: solid black 5px;
-  background: linear-gradient(180deg, #fff 34%, #ba5959 100%);
+  background: linear-gradient(180deg, #fff 34%, #ee7474 100%);
 }
 
 h2 {

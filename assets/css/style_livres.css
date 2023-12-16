@@ -30,7 +30,7 @@ body:hover {
 body {
   height: 1069px;
   max-width: 1920px;
-  background: #dbdbdb;
+  background: white;
   opacity: 0;
   animation: body 500ms both;
 }
@@ -45,7 +45,7 @@ header {
   width: 100%;
   height: 150px;
   border-bottom: solid 5px black;
-  background: #dbdbdb;
+  background: white;
 }
 
 h1 {
@@ -71,7 +71,6 @@ li {
 }
 
 .transform:hover {
-  transition: 300ms;
   transform: scale(1.1);
 }
 
@@ -82,6 +81,7 @@ li {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  transition: 300ms;
 }
 
 .displayFlex {
@@ -100,7 +100,7 @@ li {
   width: 100%;
   padding-top: 20px;
   margin: auto;
-  background: #ba5959;
+  background: #ee7474;
   height: 650px;
   border-bottom: solid 5px black;
   position: relative;
@@ -117,82 +117,14 @@ li {
   text-align: center;
 }
 
-.section__com__link {
-  color: #dbdbdb;
+.link {
+  color: white;
   text-decoration: none;
   display: block;
 }
 
 .margin1 {
   margin-top: 1px;
-}
-
-.section__com__link__anim,
-.section__com__link__anim2,
-.section__com__link__anim3 {
-  width: 1px;
-  height: 1px;
-  background: transparent;
-  display: block;
-  margin-left: 35%;
-}
-
-.section__com__link:hover + .section__com__link__anim {
-  transform-origin: left;
-  background: #dbdbdb;
-  animation: linkAnim 300ms both;
-  animation-timing-function: cubic-bezier(0.92, 0.04, 1, 1);
-}
-
-.section__com__link:hover ~ .section__com__link__anim2 {
-  transform-origin: left;
-  background: #dbdbdb;
-  animation: linkAnim 300ms 50ms both;
-  animation-timing-function: cubic-bezier(0.92, 0.04, 1, 1);
-}
-
-.section__com__link:hover ~ .section__com__link__anim3 {
-  transform-origin: left;
-  background: #dbdbdb;
-  animation: linkAnim 300ms 100ms both;
-  animation-timing-function: cubic-bezier(0.92, 0.04, 1, 1);
-}
-
-@keyframes linkAnim {
-  100% {
-    transform: scaleX(70);
-  }
-}
-
-.section__com__link:active + .section__com__link__anim {
-  transform-origin: left;
-  background: #dbdbdb;
-  animation: linkAnimActive 100ms both;
-  animation-timing-function: cubic-bezier(0.92, 0.04, 1, 1);
-}
-
-.section__com__link:active ~ .section__com__link__anim2 {
-  transform-origin: left;
-  background: #dbdbdb;
-  animation: linkAnimActive 100ms both;
-  animation-timing-function: cubic-bezier(0.92, 0.04, 1, 1);
-}
-
-.section__com__link:active ~ .section__com__link__anim3 {
-  transform-origin: left;
-  background: #dbdbdb;
-  animation: linkAnimActive 100ms both;
-  animation-timing-function: cubic-bezier(0.92, 0.04, 1, 1);
-}
-
-@keyframes linkAnimActive {
-  0% {
-    transform: scaleX(70);
-  }
-
-  100% {
-    transform: scaleX(120) translateX(20px);
-  }
 }
 
 .positionAbsolute {
@@ -265,7 +197,7 @@ li {
   height: 429px;
   bottom: 20px;
   left: 475px;
-  color: #dbdbdb;
+  color: white;
 }
 
 .aLien {
@@ -276,7 +208,7 @@ li {
 }
 
 .colorWithe {
-  color: #dbdbdb;
+  color: white;
 }
 
 .aLien__2 {
