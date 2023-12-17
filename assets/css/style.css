@@ -288,6 +288,16 @@ main {
   font-family: Playfair_italic;
 }
 
+.imaginaire {
+  background: -webkit-linear-gradient(
+    138deg,
+    rgba(191, 34, 34, 1) 44%,
+    rgba(0, 0, 0, 1) 90%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .sectionRight__p__heureux__fin {
   font-family: Playfair_blackItalic;
   display: block;
