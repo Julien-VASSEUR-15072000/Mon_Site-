@@ -281,7 +281,11 @@ main {
 }
 
 .sectionRight__p__heureux {
-  font-family: Playfair_black;
+  font-family: PlayFair_regular;
+}
+
+.sectionRight__p__heureux__italic {
+  font-family: Playfair_italic;
 }
 
 .sectionRight__p__heureux__fin {
@@ -405,16 +409,16 @@ main {
 
 @media screen and (max-width: 1320px) {
   body {
-    height: 1390px;
+    height: 1190px;
   }
 
   .liens_livres {
-    margin-top: 548px;
+    margin-top: 348px;
     height: 412px;
   }
 
   .sectionRight {
-    height: 1300px;
+    height: 1100px;
   }
 
   @keyframes loader_header {
