@@ -70,10 +70,6 @@ li {
   list-style-type: none;
 }
 
-.transform:hover {
-  transform: scale(1.1);
-}
-
 .transform {
   font-family: PlayFair_regular;
   color: black;
@@ -191,6 +187,7 @@ li {
 }
 
 .MHP1__p {
+  position: absolute;
   font-family: PlayFair_regular;
   text-align: justify;
   width: 500px;
@@ -220,7 +217,7 @@ li {
 }
 
 .MHP2 {
-  background: #fffab5;
+  background: #ffffff;
   width: 100%;
   padding-top: 20px;
   margin: auto;
@@ -299,7 +296,6 @@ li {
   }
 
   .MHP1__p {
-    transition: 500ms;
     width: 290px;
     bottom: 170px;
   }
