@@ -63,6 +63,8 @@
   }
 }
 
+/* Mise à Jour bonton */
+
 .maj {
   font-family: Playfair_black;
   background: -webkit-linear-gradient(
@@ -79,6 +81,18 @@
 
 .majAbsolute {
   transform: translateY(-300px);
+}
+
+.majAbsoluteHover {
+  transform: translateY(-300px) scale(1.1);
+}
+
+.majHover {
+  transform: scale(1.1);
+}
+
+.pointerNone {
+  pointer-events: none;
 }
 
 .disparitionSynopsis {
@@ -129,7 +143,12 @@
   }
 
   .majAbsolute {
-    transform: translateX(155px) translateY(-300px);
+    transform: translateX(163px) translateY(-300px);
+    transform-origin: center;
+  }
+
+  .majAbsoluteHover {
+    transform: translateX(163px) translateY(-300px) scale(1.1);
   }
 
   .stats1 {
@@ -148,7 +167,11 @@
 
 @media screen and (max-width: 768px) {
   .majAbsolute {
-    transform: translateX(45px) translateY(-250px);
+    transform: translateX(63px) translateY(-265px);
+  }
+
+  .majAbsoluteHover {
+    transform: translateX(63px) translateY(-265px) scale(1.1);
   }
 
   .stats1 {

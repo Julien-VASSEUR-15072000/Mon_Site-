@@ -152,12 +152,24 @@ li {
   bottom: 20px;
   left: 40px;
   overflow: hidden;
+  transition: 200ms;
+}
+
+.aImgMHP1:hover,
+.aImgMHP1:active {
+  transform: scale(1.02);
 }
 
 .imgMHP1 {
   object-fit: cover;
   width: 100%;
   height: 100%;
+  border-radius: 20px;
+  transition: 200ms;
+}
+
+.aImgMHP1:active .imgMHP1 {
+  transform: scale(0.96);
 }
 
 .trait {
@@ -267,6 +279,7 @@ li {
   .aImgMHP1 {
     transition: 500ms;
     bottom: 600px;
+    transform-origin: left;
   }
 
   .trait {
@@ -281,6 +294,15 @@ li {
 
   .disparition {
     display: none;
+  }
+
+  .aImgMHP1:hover,
+  .aImgMHP1:active {
+    transform: scale(1.02) translateX(-50%);
+  }
+
+  .aImgMHP1:active .imgMHP1 {
+    transform: scale(0.96);
   }
 }
 

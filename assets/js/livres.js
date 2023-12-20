@@ -5,7 +5,8 @@ const MHP1__p = document.querySelector(".MHP1__p");
 const degage = document.querySelector(".degage");
 const aLien = document.querySelectorAll(".aLien");
 const moove = document.querySelector(".moove");
-let merde = 0;
+let compteurImpaire = 0;
+let delai = 300;
 
 console.log(maj);
 
@@ -16,22 +17,36 @@ maj.addEventListener("click", (e) => {
   MHP1__p.classList.toggle("MHP1__p1");
   degage.classList.toggle("degage1");
   moove.classList.toggle("aLien1");
-  merde++;
-  console.log(merde);
+  maj.classList.add("pointerNone");
+  compteurImpaire++;
 
-  // Nettoyer les écouteurs d'événements
-  moove.removeEventListener("mouseenter", handleMouseEnter);
-  moove.removeEventListener("mouseout", handleMouseOut);
+  console.log(compteurImpaire);
 
-  if (merde % 2 === 1) {
-    // Ajouter les nouveaux écouteurs d'événements
+  setTimeout(function () {
+    maj.classList.remove("pointerNone");
+  }, 300);
+
+  if (compteurImpaire % 2 === 1) {
     moove.addEventListener("mouseenter", handleMouseEnter);
     moove.addEventListener("mouseout", handleMouseOut);
-  } else {
-    // Retirer les classes transform3 si merde est pair
-    moove.classList.remove("transform3");
 
-    // Ajouter les nouveaux écouteurs d'événements pour les éléments aLien
+    maj.addEventListener("mouseenter", () => {
+      maj.classList.remove("majHover");
+      maj.classList.add("majAbsoluteHover");
+    });
+    maj.addEventListener("mouseout", () => {
+      maj.classList.remove("majAbsoluteHover");
+      maj.classList.remove("majHover");
+    });
+  } else {
+    maj.classList.remove("majAbsoluteHover");
+    maj.addEventListener("mouseenter", () => {
+      maj.classList.add("majHover");
+    });
+    maj.addEventListener("mouseout", () => {
+      maj.classList.remove("majHover");
+    });
+    moove.classList.remove("transform3");
     aLien.forEach((element) => {
       element.addEventListener("mouseenter", () => {
         element.classList.add("transform2");
@@ -43,12 +58,17 @@ maj.addEventListener("click", (e) => {
   }
 });
 
-// Fonction à utiliser pour l'événement "mouseenter"
+maj.addEventListener("mouseenter", () => {
+  maj.classList.add("majHover");
+});
+maj.addEventListener("mouseout", () => {
+  maj.classList.remove("majHover");
+});
+
 function handleMouseEnter() {
   moove.classList.add("transform3");
 }
 
-// Fonction à utiliser pour l'événement "mouseout"
 function handleMouseOut() {
   moove.classList.remove("transform3");
 }
